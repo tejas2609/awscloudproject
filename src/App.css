@@ -1,38 +1,216 @@
-.App {
+@font-face {
+  font-family: corbert;
+  src: url(../src/fonts/Corbert-Regular.ttf);
+}
+@font-face {
+  font-family: pop_light;
+  src: url(../src/fonts/Poppins-Light.ttf);
+}
+@font-face {
+  font-family: pop_reg;
+  src: url(../src/fonts/Poppins-Regular.ttf);
+}
+body{
+  left: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+.googlemeet nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 75%;
+}
+.googlemeet nav .left-item{
+  padding: 1% 2%;
+}
+nav .left-item img{
+  width: 100%;
+}
+nav .right-item{
+  display: flex;
+  padding: 1% 0;
+}
+.right-item .date-time{
+  display: flex;
+  font-family: pop_light;
+  color: grey;
+}
+.date-time span{
+  padding: 0 1%;
+}
+.date-time .date{
+  white-space: nowrap;
+}
+.right-item > div{
+  padding: 0 15%;
+}
+.right-item > div:hover{
+  transform: scale(1.1);
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+.right-item .fa, .right-item .far{
+  font-size: 20px;
+}
+main .page-content{
+  margin-top: 1%;
+  margin-left: 5%;
+  width: 100%;
+}
+.page-content ul{
+  display: flex;
+  align-items: center;
+}
+.page-content ul li{
+  list-style: none;
+}
+.page-content ul li .head{
+  font-size: 37px;
+  line-height: 5px;
+  font-family: corbert;
+}
+.page-content ul li .subhead{
+  font-size: 14px;
+  width: 70%;
+  font-family: pop_reg;
+  color: grey;
+}
+.page-content ul li:first-child{
+  width: 40%;
+}
+.page-content ul li .meet-creds{
+  margin-top: 3%;
+  display: flex;
+}
+.page-content ul li .meet-creds .n_meet{
+  font-family: pop_light;
+  padding: 0.9% 3%;
+  border-radius: 5px;
+  border: 0.5px solid rgb(255, 66, 66);
+  background-color: rgb(255, 66, 66);
+  white-space: nowrap;
+}
+.meet-creds .n_meet i{
+  margin-right: 10%;
+}
+.meet-creds input{
+  margin-left: 3%;
+  width: 35%;
+  font-family: pop_light;
+  padding: 0 1%;
+}
+.meet-creds .j_meet{
+  background: none;
+  border: none;
+  margin-left: 2%;    
+  font-family: pop_reg;
+  color: rgb(255, 155, 155);
+}
+.page-content ul li .diff-line{
+  width: 40%;
+  height: 1px;
+  background-color: lightgrey;
+  margin-top: 4%;
+}
+.page-content ul li .extra-info{
+  margin-top: 1%;
+  font-family: pop_light;
+  font-size: 13px;
+}
+.page-content ul li .extra-info span a{
+  text-decoration: none;
+  color: rgb(255, 155, 155);
+}
+.extra-info span{
+  color: rgb(255, 155, 155);
+}
+.extra-info span:hover{
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.page-content ul li:last-child{
+  margin-right: 5%;
+  width: 50%;
+}
+.info-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.info-list .blog{
+  width: 40%;
+  padding: 1%;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info-list .blog .image{
+  width: 100%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.blog img{
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.blog p{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.blog .b_head{
+  font-family: corbert;
+  font-size: 18px;
+}
+.blog .b_subhead{
+  font-family: pop_light;
+  font-size: 14px;
+}
+button:hover{
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: 1s all ease;
+}
+.blog:nth-child(3),.blog:nth-child(4){
+  border-top: 0.5px solid lightgrey;
+}
+@media only screen and (max-width:1500px){
+  .page-content ul li:first-child{
+    width: 70%;
+  }
+  .page-content ul li:last-child{
+    width: 70%;
+  }  
+}
+@media only screen and (max-width:800px){
+  .page-content ul{
+    display: block;
+  }  
+  .page-content ul li:first-child{
+    width: 100%;
+  }
+  .page-content ul li:last-child{
+    margin-left: -7%;
+    width: 100%;
+  }
+  .blog p{
+    text-align: left;
+  }
+  .page-content ul li .info-list{
+    margin-top: 3%;
+  }
+  .page-content ul li .head{
+    font-size: 6.5vw;
+    line-height: 5px;
+    font-family: corbert;
+  }
+  .page-content ul li .subhead{
+    font-size: 14px;
+    width: 70%;
+    font-family: pop_reg;
+    color: grey;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
